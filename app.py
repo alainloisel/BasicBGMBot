@@ -1,13 +1,13 @@
 #Python libraries that we need to import for our bot
 import random
-from flask import Flask, request
+from flask import Flask, request,  render_template
 from pymessenger.bot import Bot
 import os 
 app = Flask(__name__)
-#ACCESS_TOKEN = 'ACCESS_TOKEN'   #
-ACCESS_TOKEN = os.environ['ACCESS_TOKEN']
-#VERIFY_TOKEN = 'VERIFY_TOKEN'   
-VERIFY_TOKEN = os.environ['VERIFY_TOKEN']
+ACCESS_TOKEN = 'ACCESS_TOKEN'   #
+#ACCESS_TOKEN = os.environ['ACCESS_TOKEN']
+VERIFY_TOKEN = 'VERIFY_TOKEN'   
+#VERIFY_TOKEN = os.environ['VERIFY_TOKEN']
 bot = Bot (ACCESS_TOKEN)
 
 @app.route('/politique')
